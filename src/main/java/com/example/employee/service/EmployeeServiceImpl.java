@@ -2,7 +2,6 @@ package com.example.employee.service;
 import com.example.employee.dto.EmployeeDto;
 import com.example.employee.model.Employee;
 import com.example.employee.mapper.EmployeeMapper;
-import com.example.employee.exception.ResourceNotFoundException;
 import com.example.employee.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
 
@@ -28,6 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public EmployeeDto createEmployee(EmployeeDto employeeDto) {
         Employee employee = EmployeeMapper.mapToEmployee(employeeDto);
+        assert employee != null;
         Employee savedEmployee = employeeRepository.save(employee);
         return (EmployeeDto) EmployeeMapper.mapToEmployeeDto(savedEmployee);
     }
