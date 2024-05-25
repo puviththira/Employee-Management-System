@@ -31,7 +31,7 @@ Before you begin, ensure you have the following installed on your local machine:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/employee-management-system.git
+    git clone https://github.com/puviththira/employee-management-system.git
     cd employee-management-system/backend
     ```
 
